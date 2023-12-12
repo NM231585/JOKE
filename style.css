@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    font-family: 'Gill Sans';
+}
+
+.targeta{
+    width: 400px;
+    height: 700px;
+    position: relative;
+    margin-top: 2rem;
+    border-radius: 7px;
+    box-shadow: 0 0 10px black;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.targeta .targeta-imagen{
+    width: 100%;
+    height: 100%;
+    background-image: url(image/Alexa.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.targeta .targeta-contenido{
+    padding: 20px;
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border-radius: 7px;
+    transform: translateY(100%);
+    transition: 400ms ease;
+}
+
+.targeta .targeta-imagen:hover + .targeta-contenido,
+.targeta-contenido:hover{
+    transform: translateY(0);
+}
